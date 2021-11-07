@@ -1,0 +1,42 @@
+#ip_security_layer {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 1010;
+  background: #fff;
+  box-shadow: 0.1em 0.1em 0.8em rgba(0, 0, 0, 0.5);
+  width: 350px;
+  display: none;
+  box-sizing: border-box;
+  height: initial;
+}
+
+.tb_button {
+  padding: 1px;
+  cursor: pointer;
+  border-right: 1px solid #8b8b8b;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+.tb_button.hover {
+  border: 2px outset #def;
+  background-color: #f8f8f8 !important;
+}
+.ws_toolbar {
+  z-index: 100000;
+}
+.ws_toolbar .ws_tb_btn {
+  cursor: pointer;
+  border: 1px solid #555;
+  padding: 3px;
+}
+.tb_highlight {
+  background-color: yellow;
+}
+.tb_hide {
+  visibility: hidden;
+}
+.ws_toolbar img {
+  padding: 2px;
+  margin: 0px;
+}
