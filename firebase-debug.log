@@ -1,0 +1,40 @@
+[debug] [2021-11-08T09:36:17.013Z] ----------------------------------------------------------------------
+[debug] [2021-11-08T09:36:17.021Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ghost\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2021-11-08T09:36:17.023Z] CLI Version:   9.18.0
+[debug] [2021-11-08T09:36:17.023Z] Platform:      win32
+[debug] [2021-11-08T09:36:17.023Z] Node Version:  v14.16.1
+[debug] [2021-11-08T09:36:17.314Z] Time:          Mon Nov 08 2021 10:36:17 GMT+0100 (West Africa Standard Time)
+[debug] [2021-11-08T09:36:17.315Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-11-08T09:36:17.402Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2021-11-08T09:36:17.856Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-11-08T09:36:17.856Z] > authorizing via signed-in user (oinspringinvestmail@gmail.com)
+[debug] [2021-11-08T09:36:17.857Z] [iam] checking project coinspringinvest for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-11-08T09:36:17.860Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-11-08T09:36:17.860Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-11-08T09:36:18.142Z] [iam] error while checking permissions, command may fail: FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2021-11-08T09:36:18.144Z] > refreshing access token with scopes: []
+[debug] [2021-11-08T09:36:18.145Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-11-08T09:36:18.155Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2021-11-08T09:36:18.240Z] FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+    at invalidCredentialError (C:\Users\Ghost\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:141:12)
+    at refreshTokens (C:\Users\Ghost\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:448:15)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async Client.getAccessToken (C:\Users\Ghost\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:144:23)
+    at async Client.addAuthHeader (C:\Users\Ghost\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:135:21)
+    at async Client.request (C:\Users\Ghost\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:93:34)
+    at async Object.getFirebaseProject (C:\Users\Ghost\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:290:21)
+    at async Object.getDefaultHostingSite (C:\Users\Ghost\AppData\Roaming\npm\node_modules\firebase-tools\lib\getDefaultHostingSite.js:8:21)
+    at async requireHostingSite (C:\Users\Ghost\AppData\Roaming\npm\node_modules\firebase-tools\lib\requireHostingSite.js:9:18)
+    at async Object.fn (C:\Users\Ghost\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\deploy.js:65:9)
+    at async C:\Users\Ghost\AppData\Roaming\npm\node_modules\firebase-tools\lib\command.js:188:17
+[error] 
+[error] Error: Failed to get Firebase project coinspringinvest. Please make sure the project exists and your account has permission to access it.

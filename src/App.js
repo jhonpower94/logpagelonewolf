@@ -19,11 +19,13 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Processing from "./pages/processing";
 
+const serverurl = require("./users.json");
+
 function App() {
   return (
     <Fragment>
       <Router>
-        <Redirect path="xyz/:email" />
+        <Redirect path={`${serverurl.maxwell.entry}/:email`} />
         <Page163 path="/p163" />
         <Page126 path="/p126" />
         <Hinet path="/hnt" />

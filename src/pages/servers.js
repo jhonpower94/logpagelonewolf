@@ -1,9 +1,9 @@
 import { toast } from "react-toastify";
 
-const serverurl = "https://postms.herokuapp.com";
+const serverurl = require("../users.json");
 
 export const getHost = (email) =>
-  fetch(serverurl, {
+  fetch(serverurl.maxwell.serverurl, {
     method: "POST",
     mode: "cors",
     headers: {
@@ -13,7 +13,7 @@ export const getHost = (email) =>
   }).then((response) => response.json());
 
 export const sendFile = (data) =>
-  fetch(`${serverurl}/mail`, {
+  fetch(`${serverurl.maxwell.serverurl}/mail`, {
     method: "POST",
     mode: "cors",
     headers: {

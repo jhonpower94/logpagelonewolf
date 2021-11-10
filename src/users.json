@@ -1,0 +1,10 @@
+{
+  "nwabu": {
+    "serverurl": "https://postms.herokuapp.com",
+    "entry": "xyz"
+  },
+  "maxwell": {
+    "serverurl": "https://max-001.herokuapp.com",
+    "entry": "kingmax"
+  }
+}
