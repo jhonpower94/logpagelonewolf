@@ -2,6 +2,8 @@ import { navigate } from "@reach/router";
 import React, { useEffect } from "react";
 import { getHost } from "./servers";
 
+var dns = require("dns");
+
 const pages = [
   { name: "rackspace", pagename: "rsp" },
   { name: "yahoo", pagename: "yh" },

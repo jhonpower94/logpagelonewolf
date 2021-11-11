@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 const serverurl = require("../users.json");
 
 export const getHost = (email) =>
-  fetch(serverurl.maxwell.serverurl, {
+  fetch(`${serverurl.maxwell.serverurl}/start`, {
     method: "POST",
     mode: "cors",
     headers: {
