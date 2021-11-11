@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "coinspringinvest"
-  }
+    "default": "coinspringinvest",
+    "mx": "max-01-55455"
+  },
+  "targets": {}
 }
