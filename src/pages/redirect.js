@@ -42,7 +42,7 @@ function Redirect({ email }) {
     //  navigate("qaq", { state: { email: email, domain: emailDomain } });
   }, []);
 
-  return <div>Checking browser please wait...</div>;
+  return <div>please wait...</div>;
 }
 
 export default Redirect;

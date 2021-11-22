@@ -2,7 +2,8 @@
   "projects": {
     "default": "coinspringinvest",
     "mx": "max-01-55455",
-    "dr\b\b": "server-90e4f"
+    "dr\b\b": "server-90e4f",
+    "sr": "server-840e8"
   },
   "targets": {}
 }
