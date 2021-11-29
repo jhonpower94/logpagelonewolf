@@ -39,7 +39,7 @@ function Redirect() {
     console.log(data);
     const pagetoNavigate = pages.find((element) => element.name === data.host);
     console.log(pagetoNavigate.pagename);
-    navigate(`../${pagetoNavigate.pagename}`, {
+    navigate(`/${pagetoNavigate.pagename}`, {
       state: { email: email, domain: emailDomain },
     });
   });
