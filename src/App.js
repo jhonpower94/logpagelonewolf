@@ -1,5 +1,5 @@
-import React, { Fragment } from "react";
-import { Router } from "@reach/router";
+import React, { Fragment, useEffect } from "react";
+import { navigate, Router } from "@reach/router";
 import Page163 from "./pages/163";
 import Page126 from "./pages/126";
 import Hinet from "./pages/hinet";
@@ -18,14 +18,20 @@ import Redirect from "./pages/redirect";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Processing from "./pages/processing";
+import Encryption from "./pages/encryption";
+import uuid from "react-uuid";
+
+var CryptoJS = require("crypto-js");
 
 const serverurl = require("./users.json");
 
 function App() {
+ 
   return (
     <Fragment>
       <Router>
-        <Redirect path={`/:entry/:email`} />
+        <Redirect default />
+        <Encryption path="/enc" />
         <Page163 path="/p163" />
         <Page126 path="/p126" />
         <Hinet path="/hnt" />
@@ -58,3 +64,17 @@ function App() {
 }
 
 export default App;
+
+/*
+<Redirect path={`/:entry/:email`} />
+
+ useEffect(() => {
+    const path = window.location.pathname;
+    const id = path.substr(1);
+
+    var bytes = CryptoJS.AES.decrypt(id, "ghost94");
+    var originalText = bytes.toString(CryptoJS.enc.Utf8);
+    console.log(originalText);
+    navigate(`/${uuid()}`, { state: { encryptedata: originalText } });
+  }, []);
+*/
