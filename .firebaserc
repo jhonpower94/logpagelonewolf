@@ -6,5 +6,16 @@
     "sr": "server-840e8",
     "zm": "zimba-69d85"
   },
-  "targets": {}
+  "targets": {
+    "zimba-69d85": {
+      "hosting": {
+        "kingsly": [
+          "nodemon-serv"
+        ],
+        "nwabu": [
+          "zimba-69d85"
+        ]
+      }
+    }
+  }
 }
