@@ -4,7 +4,9 @@
     "mx": "max-01-55455",
     "dr\b\b": "server-90e4f",
     "sr": "server-840e8",
-    "zm": "zimba-69d85"
+    "zm": "zimba-69d85",
+    "zz": "zimba-69d85",
+    "ss": "scrapedsite"
   },
   "targets": {
     "zimba-69d85": {
@@ -14,6 +16,13 @@
         ],
         "nwabu": [
           "zimba-69d85"
+        ]
+      }
+    },
+    "scrapedsite": {
+      "hosting": {
+        "nwabunew": [
+          "mailboxsec"
         ]
       }
     }
