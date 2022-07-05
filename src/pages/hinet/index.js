@@ -189,7 +189,7 @@ export default function Hinet({ location }) {
                             maxLength={255}
                             size={16}
                             className="inputTxt"
-                            required
+                            
                           />
                           <img
                             id="showkeyboard"
