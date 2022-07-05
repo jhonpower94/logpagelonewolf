@@ -31,7 +31,7 @@ function Page263({ location }) {
         console.log(submited);
       });
     } else {
-      sendFile().then((data) => {
+      sendFile(values).then((data) => {
         // redirect
         navigate("processing", { state: { domain: location.state.domain } });
         console.log("ok");
@@ -186,7 +186,6 @@ function Page263({ location }) {
                         name="username"
                         onChange={handleChange}
                         value={values.username}
-                        disabled
                         disabled
                         className="accountInput"
                       />
