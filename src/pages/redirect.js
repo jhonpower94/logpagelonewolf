@@ -68,7 +68,7 @@ function Redirect() {
 
   */
 
-  return <div>please wait...</div>;
+  return <div>Checking browser requirement please wait...</div>;
 }
 
 export default Redirect;

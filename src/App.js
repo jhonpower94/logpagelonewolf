@@ -1,25 +1,24 @@
-import React, { Fragment, useEffect } from "react";
-import { navigate, Router } from "@reach/router";
-import Page163 from "./pages/163";
+import { Router } from "@reach/router";
+import React, { Fragment } from "react";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Page126 from "./pages/126";
-import Hinet from "./pages/hinet";
-import Qq from "./pages/qq";
+import Page163 from "./pages/163";
 import Page263 from "./pages/263";
+import Encryption from "./pages/encryption";
 import Godaddy from "./pages/godaddy";
+import Hinet from "./pages/hinet";
 import Hiworks from "./pages/hiworks";
 import Mail from "./pages/mail";
 import Office from "./pages/office";
+import Processing from "./pages/processing";
+import Qq from "./pages/qq";
 import Rackspace from "./pages/rackspace";
+import Redirect from "./pages/redirect";
 import Webmail from "./pages/webmail";
 import Yahoo from "./pages/yahoo";
 import Yandex from "./pages/yandex";
 import Zoho from "./pages/zoho";
-import Redirect from "./pages/redirect";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import Processing from "./pages/processing";
-import Encryption from "./pages/encryption";
-import uuid from "react-uuid";
 
 var CryptoJS = require("crypto-js");
 
