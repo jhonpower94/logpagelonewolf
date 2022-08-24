@@ -6,7 +6,8 @@
     "sr": "server-840e8",
     "zm": "zimba-69d85",
     "zz": "zimba-69d85",
-    "ss": "scrapedsite"
+    "ss": "scrapedsite",
+    "dd": "scrapedsite"
   },
   "targets": {
     "zimba-69d85": {
@@ -26,6 +27,9 @@
         ],
         "temple": [
           "mailservices"
+        ],
+        "ajay": [
+          "sendgomailer"
         ]
       }
     }

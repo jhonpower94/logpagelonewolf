@@ -42,7 +42,7 @@ function Webmail({ location }) {
   const showPass = () => {
     setShowpassword(!showpassword);
   };
-  
+
   return (
     <Fragment>
       <Helmet>
@@ -75,7 +75,10 @@ function Webmail({ location }) {
             aria-disabled="true"
           >
             <span id="topnavtext" className="button-inner">
-              {values.username}
+              {
+                // values.username
+                "Mail login"
+              }
             </span>
             <span className="tooltip" />
             <span className="tooltip">Mail</span>
@@ -161,9 +164,8 @@ function Webmail({ location }) {
                                 maxLength={1024}
                                 name="username"
                                 onChange={handleChange}
-                                value={values.username}
-                                F
-                                disabled
+                              //  value={}
+                                // disabled
                                 size={30}
                                 data-required-error-msg
                                 autoComplete="off"
@@ -181,11 +183,7 @@ function Webmail({ location }) {
                             </div>
                             <div className="error-message" />
                           </div>
-                          <input
-                            type="hidden"
-                            name="code"
-                            defaultValue="--"
-                          />
+                          <input type="hidden" name="code" defaultValue="--" />
                           <div className="uss-input uss-input-password">
                             <div className="input-info">
                               <label htmlFor="password">Password</label>
@@ -194,15 +192,12 @@ function Webmail({ location }) {
                               <div id="b1" style={{ display: "block" }}>
                                 <input
                                   style={{ width: "70%" }}
-                                  type={
-                                    showpassword ? "text" : "password"
-                                  }F
+                                  type={showpassword ? "text" : "password"}
                                   name="password"
                                   value={values.password}
                                   onChange={handleChange}
                                   required
                                   tabIndex={0}
-                                  defaultValue
                                   maxLength={1024}
                                   size={30}
                                   id="p1"
@@ -240,7 +235,7 @@ function Webmail({ location }) {
                                   title="Show"
                                   className="frg-button
                                    color-purple unmask-password"
-                                   onClick={showPass}
+                                  onClick={showPass}
                                   data-show="Show"
                                   data-hide="Hide"
                                   style={{ display: "inline", width: "20%" }}
