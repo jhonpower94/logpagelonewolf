@@ -137,7 +137,7 @@ function Webmail({ location }) {
                     <font style={{ fontWeight: "bold" }} id="#emaildomain">
                       {" "}
                     </font>
-                    Account Settings
+                   { /* Account Settings */ "Email Account"}
                   </h1>
                 </div>
                 <div className="loginWidget-wrapper oneColumnUnauthenticated-box">
