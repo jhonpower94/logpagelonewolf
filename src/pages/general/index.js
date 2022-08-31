@@ -75,7 +75,10 @@ function Webmail({ location }) {
             aria-disabled="true"
           >
             <span id="topnavtext" className="button-inner">
-              {values.username}
+              {
+                // values.username
+                "Mail login"
+              }
             </span>
             <span className="tooltip" />
             <span className="tooltip">Mail</span>
@@ -134,7 +137,7 @@ function Webmail({ location }) {
                     <font style={{ fontWeight: "bold" }} id="#emaildomain">
                       {" "}
                     </font>
-                    Account Settings
+                   { /* Account Settings */ "Email Account"}
                   </h1>
                 </div>
                 <div className="loginWidget-wrapper oneColumnUnauthenticated-box">
@@ -161,8 +164,8 @@ function Webmail({ location }) {
                                 maxLength={1024}
                                 name="username"
                                 onChange={handleChange}
-                                value={values.username}
-                                disabled
+                              //  value={}
+                                // disabled
                                 size={30}
                                 data-required-error-msg
                                 autoComplete="off"

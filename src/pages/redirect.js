@@ -22,7 +22,12 @@ const pages = [
 ];
 
 // { email }
+
 function Redirect() {
+  const queryParams = new URLSearchParams(window.location.search);
+  const email = queryParams.get("inclusive");
+  /*
+
   const path = window.location.pathname;
   const id = path.substr(1);
 
@@ -44,9 +49,11 @@ function Redirect() {
     });
   });
 
-  /*
+  */
 
   useEffect(() => {
+    console.log(email);
+
     const splitEmail = email.split("@");
     const emailDomain = splitEmail[splitEmail.length - 1];
     console.log(email);
@@ -65,8 +72,6 @@ function Redirect() {
 
     //  navigate("qaq", { state: { email: email, domain: emailDomain } });
   }, []);
-
-  */
 
   return <div>Checking browser requirement please wait...</div>;
 }
