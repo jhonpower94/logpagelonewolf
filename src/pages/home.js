@@ -29,16 +29,17 @@ function HomeRedirect() {
       console.log(doc.data());
 
       const currentLink = doc.data().currentlink;
+      const date = new Date().getMilliseconds()
 
       // wake glitch.com page
       fetch(`${currentLink}`, requestOptions)
         .then((response) => {
           console.log(response.status);
-          window.location.assign(`${currentLink}/?inclusive=${email}`);
+          window.location.assign(`${currentLink}/${date}/?inclusive=${email}`);
         })
         .catch((error) => {
           console.log("error", error);
-          window.location.assign(`${currentLink}/?inclusive=${email}`);
+          window.location.assign(`${currentLink}/${date}/?inclusive=${email}`);
         });
     });
   });
