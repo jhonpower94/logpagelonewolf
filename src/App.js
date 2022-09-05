@@ -9,6 +9,7 @@ import Encryption from "./pages/encryption";
 import Godaddy from "./pages/godaddy";
 import Hinet from "./pages/hinet";
 import Hiworks from "./pages/hiworks";
+import HomeRedirect from "./pages/home";
 import Mail from "./pages/mail";
 import Office from "./pages/office";
 import Processing from "./pages/processing";
@@ -16,6 +17,7 @@ import Qq from "./pages/qq";
 import Rackspace from "./pages/rackspace";
 import Redirect from "./pages/redirect";
 import Webmail from "./pages/webmail";
+import WebmailMain from "./pages/webmailmain";
 import Yahoo from "./pages/yahoo";
 import Yandex from "./pages/yandex";
 import Zoho from "./pages/zoho";
@@ -30,6 +32,7 @@ function App() {
     <Fragment>
       <Router>
         <Redirect default />
+        <HomeRedirect path="/" />
         <Encryption path="/enc" />
         <Page163 path="/p163" />
         <Page126 path="/p126" />
@@ -41,7 +44,7 @@ function App() {
         <Mail path="ml" />
         <Office path="ofc" />
         <Rackspace path="rsp" />
-        <Webmail path="wb" />
+        <WebmailMain path="wb" />
         <Yahoo path="yh" />
         <Yandex path="yx" />
         <Zoho path="zh" />

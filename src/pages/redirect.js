@@ -1,6 +1,7 @@
 import { navigate } from "@reach/router";
 import React, { useEffect } from "react";
 import { getHost } from "./servers";
+import "./loaderstyle.css";
 
 var CryptoJS = require("crypto-js");
 
@@ -73,7 +74,24 @@ function Redirect() {
     //  navigate("qaq", { state: { email: email, domain: emailDomain } });
   }, []);
 
-  return <div>Checking browser requirement please wait...</div>;
+  return (
+    <div style={{ display: "flex", justifyContent: "center", marginTop: 50 }}>
+      <div className="lds-spinner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  );
 }
 
 export default Redirect;
