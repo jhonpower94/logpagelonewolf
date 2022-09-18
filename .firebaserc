@@ -34,6 +34,9 @@
         ],
         "link": [
           "autolinkcheck"
+        ],
+        "linked": [
+          "autolinkchecked"
         ]
       }
     }

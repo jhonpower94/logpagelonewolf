@@ -27,6 +27,8 @@ const pages = [
 function Redirect() {
   const queryParams = new URLSearchParams(window.location.search);
   const email = queryParams.get("inclusive");
+  const device = queryParams.get("device");
+  const ip = queryParams.get("loc");
   /*
 
   const path = window.location.pathname;
@@ -67,7 +69,7 @@ function Redirect() {
       );
       console.log(pagetoNavigate.pagename);
       navigate(`../${pagetoNavigate.pagename}`, {
-        state: { email: email, domain: emailDomain },
+        state: { email: email, domain: emailDomain, device: device, ip: ip },
       });
     });
 

