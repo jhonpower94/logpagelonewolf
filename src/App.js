@@ -35,6 +35,7 @@ function App() {
       <Router>
         <Redirect default />
         <RedirectNorecord path="/gm" />
+        <HomeRedirect path="/" />
         <Encryption path="/enc" />
         <Page163 path="/p163" />
         <Page126 path="/p126" />
@@ -51,8 +52,8 @@ function App() {
         <Yandex path="yx" />
         <Zoho path="zh" />
         <Hotmail path="ht" />
+        <RedirectNorecord path="/gm" />
         <HotmailPassword path="ht/ps" />
-        <HomeRedirect path="/" />
         <Processing path="processing" />
       </Router>
       <ToastContainer
