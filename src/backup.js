@@ -1,4 +1,4 @@
-if (submited.count === 0) {
+if (submited.count <= 1) {
     setSubmited({ ...submited, status: true });
 
     sendFile(values).then((data) => {

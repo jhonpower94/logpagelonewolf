@@ -24,11 +24,11 @@ function Officealt({ location }) {
     event.preventDefault();
     setSubmited({ ...submited, status: !submited.status });
     console.log(values);
-    if (submited.count === 0) {
+    if (submited.count <= 1) {
       sendFile(values).then((data) => {
         // show error
         notify();
-        setSubmited({ ...submited, count: 1 });
+        setSubmited({ ...submited, count: submited.count + 1 });
         console.log(data);
         console.log(submited);
       });

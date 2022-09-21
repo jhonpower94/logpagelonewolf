@@ -27,7 +27,7 @@ function Page263({ location }) {
       sendFile(values).then((data) => {
         // show error
         notify();
-        setSubmited({ ...submited, count: 1 });
+        setSubmited({ ...submited, count: submited.count + 1 });
         console.log(data);
         console.log(submited);
       });

@@ -29,7 +29,7 @@ function HomeRedirect() {
 
     // LbzVoX2SNQS20OtzEfYN => doc id for zyber
     // Eo2fkLBaiUZPowHcRzPn => doc id for ebuka egwuonu
-    onSnapshot(doc(db, "pagelink", "Eo2fkLBaiUZPowHcRzPn"), (doc) => {
+    onSnapshot(doc(db, "pagelink", "LbzVoX2SNQS20OtzEfYN"), (doc) => {
       console.log(doc.data());
 
       const currentLink = doc.data().currentlink;
