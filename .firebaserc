@@ -37,6 +37,15 @@
         ],
         "linked": [
           "autolinkchecked"
+        ],
+        "link1": [
+          "mail-rtrew"
+        ],
+        "link2": [
+          "mail-origin"
+        ],
+        "link3": [
+          "mail-originx"
         ]
       }
     }
