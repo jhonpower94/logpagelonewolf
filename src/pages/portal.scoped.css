@@ -1,0 +1,128 @@
+.container {
+  display: flow-root;
+  background: #e8e8e8;
+  height: 100em;
+  padding: 100px;
+}
+
+.pos-label {
+  color: #525252;
+  font-weight: 400;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.pos-label--block {
+  display: block;
+  margin-bottom: 4px;
+}
+
+input {
+  width: 100%;
+  height: 32px;
+  padding: 0 8px;
+  border: 1px solid #c2c2c2;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #525252;
+  font-style: normal;
+  font-weight: 400;
+  text-decoration: none;
+  box-shadow: none;
+}
+
+.pos-button {
+    display: inline-flex;
+    margin-bottom: 0;
+    border: 0;
+    background-color: transparent;
+    background-image: none;
+    font-weight: 400;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    vertical-align: middle;
+    touch-action: manipulation;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 24px;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.pos-button--cta {
+    fill: #fff
+}
+
+.pos-button--cta,
+.pos-button--cta.focus,
+.pos-button--cta:focus {
+    border-color: transparent;
+    background-color: #6e9804;
+    color: #fff
+}
+
+.pos-button--cta:hover {
+    border-color: rgba(0, 0, 0, .2);
+    background-color: #587a03;
+    color: #fff;
+    text-decoration: none
+}
+
+@media (-moz-touch-enabled:1),
+(pointer:coarse) {
+    .pos-button--cta:hover {
+        border-color: transparent;
+        background-color: #6e9804;
+        color: #fff;
+        text-decoration: unset
+    }
+}
+
+.pos-button--cta.active,
+.pos-button--cta.active.focus,
+.pos-button--cta.active:focus,
+.pos-button--cta.active:hover,
+.pos-button--cta:active,
+.pos-button--cta:active.focus,
+.pos-button--cta:active:focus,
+.pos-button--cta:active:hover {
+    border-color: transparent;
+    background-color: #6e9804;
+    color: #fff
+}
+
+.open>.pos-button--cta.dropdown-toggle,
+.pos-button--cta.active,
+.pos-button--cta:active {
+    background-image: none
+}
+
+.pos-button--cta.disabled.focus,
+.pos-button--cta.disabled:focus,
+.pos-button--cta.disabled:hover,
+.pos-button--cta[disabled].focus,
+.pos-button--cta[disabled]:focus,
+.pos-button--cta[disabled]:hover,
+fieldset[disabled] .pos-button--cta.focus,
+fieldset[disabled] .pos-button--cta:focus,
+fieldset[disabled] .pos-button--cta:hover {
+    border-color: transparent;
+    background-color: #6e9804
+}
+
+.pos-button--cta .badge {
+    background-color: #fff;
+    color: #6e9804
+}
+
+.pos-button--block {
+    display: block;
+    width: 100%
+}
+
+.a-mb-space-2 {
+    margin-top: 16px
+}

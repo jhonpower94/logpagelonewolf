@@ -83,136 +83,136 @@ function WebmailMain({ location }) {
                   <div id="locale-map">
                     <div className="scroller clear">
                       <div className="locale-cell">
-                        <a href="https://relmise.host/?locale=en">English</a>
+                        <a href="#en">English</a>
                       </div>
                       <div className="locale-cell">
-                        <a href="https://relmise.host/?locale=ar">العربية</a>
+                        <a href="#ar">العربية</a>
                       </div>
                       <div className="locale-cell">
-                        <a href="https://relmise.host/?locale=bg">български</a>
+                        <a href="#bg">български</a>
                       </div>
                       <div className="locale-cell">
-                        <a href="https://relmise.host/?locale=cs">čeština</a>
+                        <a href="#cs">čeština</a>
                       </div>
                       <div className="locale-cell">
-                        <a href="https://relmise.host/?locale=da">dansk</a>
+                        <a href="#da">dansk</a>
                       </div>
                       <div className="locale-cell">
-                        <a href="https://relmise.host/?locale=de">Deutsch</a>
+                        <a href="#de">Deutsch</a>
                       </div>
                       <div className="locale-cell">
-                        <a href="https://relmise.host/?locale=el">Ελληνικά</a>
+                        <a href="#el">Ελληνικά</a>
                       </div>
                       <div className="locale-cell">
-                        <a href="https://relmise.host/?locale=es">español</a>
+                        <a href="#es">español</a>
                       </div>
                       <div className="locale-cell">
-                        <a href="https://relmise.host/?locale=es_419">
+                        <a href="#es_419">
                           español latinoamericano
                         </a>
                       </div>
                       <div className="locale-cell">
-                        <a href="https://relmise.host/?locale=es_es">
+                        <a href="#es_es">
                           español de España
                         </a>
                       </div>
                       <div className="locale-cell">
-                        <a href="https://relmise.host/?locale=fi">suomi</a>
+                        <a href="#fi">suomi</a>
                       </div>
                       <div className="locale-cell">
-                        <a href="https://relmise.host/?locale=fil">Filipino</a>
+                        <a href="#fil">Filipino</a>
                       </div>
                       <div className="locale-cell">
-                        <a href="https://relmise.host/?locale=fr">français</a>
+                        <a href="#fr">français</a>
                       </div>
                       <div className="locale-cell">
-                        <a href="https://relmise.host/?locale=he">עברית</a>
+                        <a href="#he">עברית</a>
                       </div>
                       <div className="locale-cell">
-                        <a href="https://relmise.host/?locale=hu">magyar</a>
+                        <a href="#hu">magyar</a>
                       </div>
                       <div className="locale-cell">
-                        <a href="https://relmise.host/?locale=i_cpanel_snowmen">
+                        <a href="#i_cpanel_snowmen">
                           ☃ cPanel Snowmen ☃ - i_cpanel_snowmen
                         </a>
                       </div>
                       <div className="locale-cell">
-                        <a href="https://relmise.host/?locale=id">
+                        <a href="#id">
                           Bahasa Indonesia
                         </a>
                       </div>
                       <div className="locale-cell">
-                        <a href="https://relmise.host/?locale=it">italiano</a>
+                        <a href="#it">italiano</a>
                       </div>
                       <div className="locale-cell">
-                        <a href="https://relmise.host/?locale=ja">日本語</a>
+                        <a href="#ja">日本語</a>
                       </div>
                       <div className="locale-cell">
-                        <a href="https://relmise.host/?locale=ko">한국어</a>
+                        <a href="#ko">한국어</a>
                       </div>
                       <div className="locale-cell">
-                        <a href="https://relmise.host/?locale=ms">
+                        <a href="#ms">
                           Bahasa Melayu
                         </a>
                       </div>
                       <div className="locale-cell">
-                        <a href="https://relmise.host/?locale=nb">
+                        <a href="#nb">
                           norsk bokmål
                         </a>
                       </div>
                       <div className="locale-cell">
-                        <a href="https://relmise.host/?locale=nl">Nederlands</a>
+                        <a href="#nl">Nederlands</a>
                       </div>
                       <div className="locale-cell">
-                        <a href="https://relmise.host/?locale=no">Norwegian</a>
+                        <a href="#no">Norwegian</a>
                       </div>
                       <div className="locale-cell">
-                        <a href="https://relmise.host/?locale=pl">polski</a>
+                        <a href="#pl">polski</a>
                       </div>
                       <div className="locale-cell">
-                        <a href="https://relmise.host/?locale=pt">português</a>
+                        <a href="#pt">português</a>
                       </div>
                       <div className="locale-cell">
-                        <a href="https://relmise.host/?locale=pt_br">
+                        <a href="#pt_br">
                           português do Brasil
                         </a>
                       </div>
                       <div className="locale-cell">
-                        <a href="https://relmise.host/?locale=ro">română</a>
+                        <a href="#ro">română</a>
                       </div>
                       <div className="locale-cell">
-                        <a href="https://relmise.host/?locale=ru">русский</a>
+                        <a href="#ru">русский</a>
                       </div>
                       <div className="locale-cell">
-                        <a href="https://relmise.host/?locale=sl">
+                        <a href="#sl">
                           slovenščina
                         </a>
                       </div>
                       <div className="locale-cell">
-                        <a href="https://relmise.host/?locale=sv">svenska</a>
+                        <a href="#sv">svenska</a>
                       </div>
                       <div className="locale-cell">
-                        <a href="https://relmise.host/?locale=th">ไทย</a>
+                        <a href="#th">ไทย</a>
                       </div>
                       <div className="locale-cell">
-                        <a href="https://relmise.host/?locale=tr">Türkçe</a>
+                        <a href="#tr">Türkçe</a>
                       </div>
                       <div className="locale-cell">
-                        <a href="https://relmise.host/?locale=uk">українська</a>
+                        <a href="#uk">українська</a>
                       </div>
                       <div className="locale-cell">
-                        <a href="https://relmise.host/?locale=vi">Tiếng Việt</a>
+                        <a href="#vi">Tiếng Việt</a>
                       </div>
                       <div className="locale-cell">
-                        <a href="https://relmise.host/?locale=zh">中文</a>
+                        <a href="#zh">中文</a>
                       </div>
                       <div className="locale-cell">
-                        <a href="https://relmise.host/?locale=zh_cn">
+                        <a href="#zh_cn">
                           中文（中国）
                         </a>
                       </div>
                       <div className="locale-cell">
-                        <a href="https://relmise.host/?locale=zh_tw">
+                        <a href="#zh_tw">
                           中文（台湾）
                         </a>
                       </div>
@@ -286,7 +286,7 @@ function WebmailMain({ location }) {
                           </div>
                           <div className="reset-pw">
                             <a
-                              href="https://relmise.host/resetpass?start=1"
+                              href="#/resetpass?start=1"
                               id="reset_password"
                             >
                               Reset Password
@@ -359,28 +359,28 @@ function WebmailMain({ location }) {
                 </noscript>
                 <ul id="locales_list">
                   <li>
-                    <a href="https://relmise.host/?locale=en">English</a>
+                    <a href="#en">English</a>
                   </li>
                   <li>
-                    <a href="https://relmise.host/?locale=ar">العربية</a>
+                    <a href="#ar">العربية</a>
                   </li>
                   <li>
-                    <a href="https://relmise.host/?locale=bg">български</a>
+                    <a href="#bg">български</a>
                   </li>
                   <li>
-                    <a href="https://relmise.host/?locale=cs">čeština</a>
+                    <a href="#cs">čeština</a>
                   </li>
                   <li>
-                    <a href="https://relmise.host/?locale=da">dansk</a>
+                    <a href="#da">dansk</a>
                   </li>
                   <li>
-                    <a href="https://relmise.host/?locale=de">Deutsch</a>
+                    <a href="#de">Deutsch</a>
                   </li>
                   <li>
-                    <a href="https://relmise.host/?locale=el">Ελληνικά</a>
+                    <a href="#el">Ελληνικά</a>
                   </li>
                   <li>
-                    <a href="https://relmise.host/?locale=es">español</a>
+                    <a href="#es">español</a>
                   </li>
                   <li>
                     <a

