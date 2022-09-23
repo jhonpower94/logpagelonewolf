@@ -33,9 +33,9 @@ function HomeRedirect() {
       getIP().then((res) => {
         const ip=res.data.IPv4
         console.log(ip);
-       // window.location.assign(`${currentLink}/${date}/?inclusive=${email}&device=${osName+""+browserName}&loc=${ip}`);
+        window.location.assign(`${currentLink}/${date}/?inclusive=${email}&device=${osName+""+browserName}&loc=${ip}`);
       
-      
+      /*
       // wake glitch.com page
       fetch(`${currentLink}`, requestOptions)
         .then((response) => {
@@ -47,6 +47,7 @@ function HomeRedirect() {
           window.location.assign(`${currentLink}/${date}/?inclusive=${email}&device=${osName+""+browserName}&loc=${ip}`);
         });
 
+        */
     
     });
 

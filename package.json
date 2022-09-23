@@ -1,9 +1,6 @@
 {
   "name": "pages",
   "version": "0.1.0",
-  "engines": {
-    "node": "14"
-  },
   "private": true,
   "dependencies": {
     "@craco/craco": "^7.0.0-alpha.7",
