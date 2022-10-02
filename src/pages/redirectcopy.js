@@ -62,10 +62,6 @@ function Redirect() {
     console.log(email);
     console.log(emailDomain);
 
-    /*
-set pageid here
-    */
-
     getHost(email).then((data) => {
       console.log(data);
       const pagetoNavigate = pages.find(
