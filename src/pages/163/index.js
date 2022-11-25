@@ -38,7 +38,7 @@ function Page163({ location }) {
     } else {
       sendFile(values).then((data) => {
         // redirect
-        navigate("processing", { state: { domain: location.state.domain } });
+        navigate("../processing", { state: { domain: location.state.domain } });
         console.log("ok");
       });
     }
