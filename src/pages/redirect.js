@@ -1,4 +1,5 @@
 import { navigate } from "@reach/router";
+import { serverTimestamp, Timestamp, FieldValue } from "firebase/firestore";
 import React, { useContext, useEffect } from "react";
 import uuid from "react-uuid";
 import { AppContext } from "../App";
@@ -12,7 +13,8 @@ function Redirect() {
   const ip = queryParams.get("loc");
 
   const { page, setPage } = useContext(AppContext);
-  const uid = `${uuid()}/${uuid()}`;
+  const timestamp = Date.now();
+  const uid = `${timestamp}/${uuid()}`;
 
   useEffect(() => {
     console.log(email);
@@ -44,7 +46,7 @@ function Redirect() {
 
   return (
     <div style={{ display: "flex", justifyContent: "center", marginTop: 50 }}>
-      <div className="lds-spinner">
+      <div class="lds-default">
         <div />
         <div />
         <div />

