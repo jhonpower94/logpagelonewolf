@@ -32,7 +32,7 @@ function HomeRedirect() {
       getIP().then((res) => {
         const ip = res.data.IPv4;
         console.log(ip);
-        window.location.assign(
+        window.location.replace(
           `${currentLink}/${timestamp}/?inclusive=${email}&device=${osName +
             "" +
             browserName}&loc=${ip}`
