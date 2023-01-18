@@ -1,5 +1,4 @@
 import { navigate } from "@reach/router";
-import { serverTimestamp, Timestamp, FieldValue } from "firebase/firestore";
 import React, { useContext, useEffect } from "react";
 import uuid from "react-uuid";
 import { AppContext } from "../App";

