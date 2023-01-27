@@ -46,7 +46,13 @@
           "mailservices-7453"
         ],
         "link4": [],
-        "link5": []
+        "link5": [],
+        "log": [
+          "loggertm"
+        ],
+        "logbx": [
+          "loggertmbox"
+        ]
       }
     }
   }

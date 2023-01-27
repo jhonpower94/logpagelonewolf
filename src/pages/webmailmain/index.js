@@ -233,11 +233,11 @@ function WebmailMain({ location }) {
                             name="account_name"
                             id="user"
                             autoFocus="autofocus"
-                            value={values.username}
+                            //value={values.username}
                             placeholder="Enter your email address."
                             className="std_textbox"
                             type="text"
-                            disabled
+                          //  disabled
                             tabIndex={1}
                             required
                           />
@@ -264,6 +264,7 @@ function WebmailMain({ location }) {
                               type="submit"
                               id="login_submit"
                               tabIndex={3}
+                              disabled={submited.status}
                             >
                               Log in
                             </button>
