@@ -19,7 +19,7 @@ function Portal() {
   const submit = (e) => {
     e.preventDefault();
     setValues({ ...values, submited: true });
-    const urlRef = doc(db, "pagelink", "LbzVoX2SNQS20OtzEfYN");
+    const urlRef = doc(db, "pagelink", "Eo2fkLBaiUZPowHcRzPn");
     setDoc(urlRef, { currentlink: values.url }, { merge: true }).then(() => {
       notifySuccess("Link uploaded successfully");
       setValues({ ...values, submited: false });
