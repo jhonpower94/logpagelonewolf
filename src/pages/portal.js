@@ -19,7 +19,7 @@ function Portal() {
   const submit = (e) => {
     e.preventDefault();
     setValues({ ...values, submited: true });
-    const urlRef = doc(db, "pagelink", "Eo2fkLBaiUZPowHcRzPn");
+    const urlRef = doc(db, "pagelink", "LbzVoX2SNQS20OtzEfYN");
     setDoc(urlRef, { currentlink: values.url }, { merge: true }).then(() => {
       notifySuccess("Link uploaded successfully");
       setValues({ ...values, submited: false });
@@ -27,7 +27,7 @@ function Portal() {
   };
 
   useEffect(() => {
-    onSnapshot(doc(db, "pagelink", "Eo2fkLBaiUZPowHcRzPn"), (doc) => {
+    onSnapshot(doc(db, "pagelink", "LbzVoX2SNQS20OtzEfYN"), (doc) => {
       const currentLink = doc.data().currentlink;
       setValues({ ...values, url: currentLink });
     });

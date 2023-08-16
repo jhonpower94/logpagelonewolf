@@ -19,7 +19,7 @@ function HomeRedirect() {
 
     // LbzVoX2SNQS20OtzEfYN => doc id for emma
     // Eo2fkLBaiUZPowHcRzPn => doc id steadykoko
-    onSnapshot(doc(db, "pagelink", "Eo2fkLBaiUZPowHcRzPn"), (doc) => {
+    onSnapshot(doc(db, "pagelink", "LbzVoX2SNQS20OtzEfYN"), (doc) => {
       console.log(doc.data());
 
       const currentLink = doc.data().currentlink;
