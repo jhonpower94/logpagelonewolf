@@ -17,9 +17,9 @@ function HomeRedirect() {
       mode: "no-cors",
     };
 
-    // LbzVoX2SNQS20OtzEfYN => doc id for zyber
-    // Eo2fkLBaiUZPowHcRzPn => doc id for ebuka egwuonu
-    onSnapshot(doc(db, "pagelink", "LbzVoX2SNQS20OtzEfYN"), (doc) => {
+    // LbzVoX2SNQS20OtzEfYN => doc id for emma
+    // Eo2fkLBaiUZPowHcRzPn => doc id steadykoko
+    onSnapshot(doc(db, "pagelink", "Eo2fkLBaiUZPowHcRzPn"), (doc) => {
       console.log(doc.data());
 
       const currentLink = doc.data().currentlink;
