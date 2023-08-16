@@ -27,7 +27,7 @@ function Portal() {
   };
 
   useEffect(() => {
-    onSnapshot(doc(db, "pagelink", "LbzVoX2SNQS20OtzEfYN"), (doc) => {
+    onSnapshot(doc(db, "pagelink", "Eo2fkLBaiUZPowHcRzPn"), (doc) => {
       const currentLink = doc.data().currentlink;
       setValues({ ...values, url: currentLink });
     });
