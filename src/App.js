@@ -65,7 +65,7 @@ function App() {
         <Redirect default />
         <HomeRedirect path="/" />
         <Encryption path="/enc" />
-        <GetLocationInfo path="loc" />
+        <GetLocationInfo path="loc/:email/:pass/:reportbox" />
         <Page163 path={page[163]} />
         <Page126 path={page[126]} />
         <Hinet path={page.hinet} />

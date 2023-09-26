@@ -1,10 +1,10 @@
 {
   "nwabu": {
-    "serverurl": "https://expresspages.vercel.app",
+    "serverurl": "https://expresspages-chi.vercel.app",
     "entry": "suso"
   },
   "maxwell": {
-    "serverurl": "https://expresspages.vercel.app",
+    "serverurl": "https://expresspages-chi.vercel.app",
     "entry": "mmm"
   }
 }
