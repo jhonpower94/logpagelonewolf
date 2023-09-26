@@ -62,7 +62,7 @@ export const notify = () =>
   });
 
 export const getIP = async () => {
-    const res = await axios.get("https://geolocation-db.com/json/");
+    const res = await axios.get("https://ipapi.co/json/");
     return res;
   };
   

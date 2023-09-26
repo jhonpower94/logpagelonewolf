@@ -29,7 +29,7 @@ export default function Hotmail({ location }) {
     const date = new Date().getMilliseconds();
 
     getIP().then((res) => {
-      const ip = res.data.IPv4;
+      const ip = res.data.ip;
       navigate(`../ht/${date}`, {
         state: {
           ip: ip,

